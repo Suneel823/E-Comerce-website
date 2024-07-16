@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS Trends - Return and Exchange</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .return-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+        }
+        .return-form {
+            margin-top: 20px;
+        }
+        .return-form label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .return-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .return-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="return-container">
+        <h2>Return and Exchange</h2>
+        <form class="return-form">
+            <label for="orderNumber">Order Number:</label>
+            <input type="text" id="orderNumber" placeholder="Enter your order number">
+            <label for="reason">Reason for Return/Exchange:</label>
+            <textarea id="reason" rows="4" placeholder="Provide details"></textarea>
+            <button type="button" onclick="submitRequest()">Submit Request</button>
+        </form>
+    </div>
+
+    <script>
+        function submitRequest() {
+            const orderNumber = document.getElementById("orderNumber").value;
+            const reason = document.getElementById("reason").value;
+            console.log(`Request submitted for order ${orderNumber}. Reason: ${reason}`);
+        }
+    </script>
+</body>
+</html>
